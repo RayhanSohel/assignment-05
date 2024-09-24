@@ -1,97 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
-    <link rel="icon" type="image/x-icon" href="assets/Donate-bd-logo.png" />
+    <link rel="icon" type="image/x-icon" href="assets/Donate-bd-logo.png">
     <!-- Google font "Manrope" CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- daisyUI CSS file + Tailwind CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Kit CDN -->
-    <script
-      src="https://kit.fontawesome.com/7554a6c3c1.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+</head>
 
-  <!--Website Body start -->
-  <body class="font-manrope min-h-screen flex flex-col">
+<!--Website Body start -->
+<body class="font-manrope min-h-screen flex flex-col">
     <!-- Header section start -->
     <header class="bg-bgColor backdrop-blur-lg sticky top-0 z-50">
-      <!--Top Navbar start -->
-      <nav class="p-4 container m-auto">
-        <div class="navbar">
-          <!-- Nav menu Items  -->
-          <div class="navbar-start flex">
-            <button onclick="navigateToNewPage()" class="btn btn-success px-6" href="blog.html">Blog</button>
-          </div>
-          <!-- Nav Brand Name -->
-          <div class="navbar-center cursor-pointer">
-            <div class="w-12">
-              <img src="assets/Donate-bd-logo.png" alt="Donate BD Logo" />
+        <!--Top Navbar start -->
+        <nav class="p-4 container m-auto">
+            <div class="grid md:grid-flow-col justify-center md:justify-between gap-2">
+                <!-- Nav menu Items  -->
+                <div class="flex justify-center">
+                    <button onclick="navigateToNewPage()" class="btn btn-success px-6" href="blog.html">Blog</button>
+                </div>
+                <!-- Nav Brand Name -->
+                <div class="flex justify-center items-center cursor-pointer">
+                    <div class="w-12">
+                        <img src="assets/Donate-bd-logo.png" alt="Donate BD Logo" />
+                    </div>
+                    <a class="text-2xl font-bold ml-2">Donate Bangladesh</a>
+                </div>
+                <!--Wallet Balance -->
+                <div class="flex justify-center">
+                    <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
+                        <div class="w-6 cursor-pointer">
+                            <img src="assets/taka-icon.png" alt="Donate BD Logo" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold">10000</h3>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">BDT</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="text-2xl font-bold ml-2">Donate Bangladesh</a>
-          </div>
-          <!--Wallet Balance -->
-          <div class="navbar-end">
-            <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
-              <div class="w-6 cursor-pointer">
-                <img src="assets/taka-icon.png" alt="Donate BD Logo" />
-              </div>
-              <div>
-                <h3 class="font-bold">10000</h3>
-              </div>
-              <div>
-                <h3 class="font-bold">BDT</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!--Bottom Navbar start -->
-      <nav class="bg-bgColor p-4">
-        <ul class="flex justify-center gap-6">
-          <li>
-            <button class="menu-btn btn btn-success" data-target="donation-section" onclick="setActive(this)">Donation</button>
-          </li>
-          <li>
-            <button class="menu-btn btn" data-target="history-section" onclick="setActive(this)">History</button>
-          </li>
-        </ul>
-      </nav>
+        </nav>
+        <!--Bottom Navbar start -->
+        <nav class="bg-bgColor p-4">
+            <ul class="flex justify-center gap-6">
+                <li>
+                    <button class="menu-btn btn btn-success" data-target="donation-section" onclick="setActive(this)">Donation</button>
+                </li>
+                <li>
+                    <button class="menu-btn btn" data-target="history-section" onclick="setActive(this)">History</button>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <!-- main sections start -->
     <main class="flex-grow">
 
-      <div id="donation-section" class="content-section">
-        <h1 class="text-3xl">Donation Section</h1>
-      </div>
+        <div id="donation-section" class="content-section">
+            <h1 class="text-3xl">Donation Section</h1>
+        </div>
 
-      <div id="history-section" class="content-section">
-        <h1 class="text-3xl">History Section</h1>
-      </div>
+        <div id="history-section" class="content-section">
+            <h1 class="text-3xl">History Section</h1>
+        </div>
 
     </main>
 
     <!-- Footer section start -->
     <footer class="bg-bgColor p-10">
-      <div class="text-center">
-        <p class="font-bold">Copyright &copy; Donate Bangladesh</p>
-      </div>
+        <div class="text-center">
+            <p class="font-bold">Copyright &copy; Donate Bangladesh</p>
+        </div>
     </footer>
+
+    <!-- External JS file link -->
     <script src="main.js"></script>
-  </body>
+</body>
 </html>

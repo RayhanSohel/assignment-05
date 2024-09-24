@@ -12,112 +12,114 @@
     <!-- daisyUI CSS file + Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Kit CDN -->
-    <script src="https://kit.fontawesome.com/7554a6c3c1.js" crossorigin="anonymous"></script>
 </head>
 
 <!--Website Body start -->
 <body class="font-manrope min-h-screen flex flex-col">
     <!-- Header section start -->
-    <header class="bg-bgColor">
-    <!--Navbar start -->
-    <nav class="p-4 container m-auto">
-        <div class="navbar">
-        <!-- Nav menu Items  -->
-        <div class="navbar-start flex">
-            <button onclick="goHome()" class="btn btn-success px-6" href="index.html">Home</button>
-        </div>
-        <!-- Nav Brand Name -->
-        <div class="navbar-center cursor-pointer">
-            <div class="w-12">
-                <img src="assets/Donate-bd-logo.png" alt="Donate BD Logo">
-            </div>
-            <a class="text-2xl font-bold ml-2">Donate Bangladesh</a>
-        </div>
-        <!--Wallet Balance -->
-        <div class="navbar-end">
-            <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
-                <div class="w-6 cursor-pointer">
-                    <img src="assets/taka-icon.png" alt="Donate BD Logo">
+    <header class="bg-bgColor backdrop-blur-lg sticky top-0 z-50">
+        <!--Navbar start -->
+        <nav class="p-4 container m-auto">
+            <div class="grid md:grid-flow-col justify-center md:justify-between gap-2">
+                <!-- Nav menu Items  -->
+                <div class="flex justify-center">
+                    <button onclick="goHome()" class="btn btn-success px-6" href="index.html">Home</button>
                 </div>
-                <Div>
-                    <h3 class="font-bold">10000</h3>
-                </Div>
-                <Div>
-                    <h3 class="font-bold">BDT</h3>
-                </Div>
+                <!-- Nav Brand Name -->
+                <div class="cursor-pointer flex justify-center items-center">
+                    <div class="w-12">
+                        <img src="assets/Donate-bd-logo.png" alt="Donate BD Logo">
+                    </div>
+                    <a class="text-2xl font-bold ml-2">Donate Bangladesh</a>
+                </div>
+                <!--Wallet Balance -->
+                <div class="flex justify-center">
+                    <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
+                        <div class="w-6 cursor-pointer">
+                            <img src="assets/taka-icon.png" alt="Donate BD Logo">
+                        </div>
+                        <Div>
+                            <h3 class="font-bold">10000</h3>
+                        </Div>
+                        <Div>
+                            <h3 class="font-bold">BDT</h3>
+                        </Div>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-    </nav>
+        </nav>
     </header>
+
     <!-- main sections start -->
     <main class="flex-grow">
-    <!-- FAQ Section start -->
-    <section>
-        <div class="grid grid-cols-1 gap-8 px-5 lg:px-10 py-8 lg:py-24 container m-auto">
-          <!-- FAQ section title content -->
-          <div class=" flex flex-col items-center text-center">
-            <div class="lg:flex ">
-              <a class="px-6 py-2 cursor-pointer font-extrabold rounded-full bg-white">FAQs?</a>
+        <!-- FAQ Section start -->
+        <section class="container m-auto">
+            <div class="grid grid-cols-1 gap-8 px-5 lg:px-10 py-8 lg:py-24 container m-auto">
+            <!-- FAQ section title content -->
+            <div class=" flex flex-col items-center text-center">
+                <div class="lg:flex ">
+                    <a class="px-6 py-2 cursor-pointer font-extrabold rounded-full bg-white">FAQs?</a>
+                </div>
+                <h1 class="text-2xl lg:text-4xl font-extrabold">DOM related Questions Answered</h1>
             </div>
-            <h1 class="text-2xl lg:text-4xl font-extrabold">DOM related Questions Answered</h1>
-          </div>
-          <!-- FAQ Container -->
-            <div class="grid gap-4">
-              <div class="collapse collapse-plus bg-bgColor">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title text-lg font-bold">What is the Document Object Model (DOM)?</div>
-                <div class="collapse-content">
-                  <p class="text-textColor font-medium">
-                    The Document Object Model (DOM) is a programming interface that represents a web page as a tree structure of objects. It allows developers to access, manipulate, and modify HTML elements, attributes, and styles using JavaScript, enabling dynamic updates and interactivity on web pages.
-                  </p>
+            <!-- FAQ Container -->
+                <div class="grid gap-4">
+                    <div class="collapse collapse-plus bg-bgColor">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-lg font-bold">What is the Document Object Model (DOM)?</div>
+                        <div class="collapse-content">
+                            <p class="text-textColor font-medium">
+                            The Document Object Model (DOM) is a programming interface that represents a web page as a tree structure of objects. It allows developers to access, manipulate, and modify HTML elements, attributes, and styles using JavaScript, enabling dynamic updates and interactivity on web pages.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-bgColor">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-lg font-bold">How do you select an element from the DOM?</div>
+                        <div class="collapse-content">
+                            <p class="text-textColor font-medium">
+                            To select an element from the DOM in JavaScript, you can use various methods, such as_
+                            </p>
+                            <ul class="list-disc ml-6">
+                                <li>Selects an element by id. <span class="font-bold">Example: document.getElementById()</span></li>
+                                <li>Selects all elements by a class name. <span class="font-bold">Example: document.getElementsByClassName()</span> </li>
+                                <li>Selects all elements by a tag name. <span class="font-bold">Example: document.getElementsByTagName()</span> </li>
+                                <li>Selects the first element by a CSS selector. <span class="font-bold">Example: document.querySelector()</span> </li>
+                                <li>Selects all elements by a CSS selector. <span class="font-bold">Example: document.querySelectorAll()</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-bgColor">
+                        <input type="radio" name="my-accordion-3"/>
+                        <div class="collapse-title text-lg font-bold">What is event delegation in the context of the DOM, and why is it useful?</div>
+                        <div class="collapse-content">
+                            <p class="text-textColor font-medium">
+                                Event delegation is a technique in the DOM where you add a single event listener to a parent element to manage events for its child elements. Instead of attaching individual listeners to each child, the event bubbles up to the parent, which handles it. This is useful because, It improves performance by reducing the number of event listeners. and also, It allows dynamic elements to be handled without needing new event listeners.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-bgColor">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-lg font-bold">How do you manipulate an element's attributes and styles using the DOM? </div>
+                        <div class="collapse-content">
+                            <p class="text-textColor font-medium">
+                                To manipulate an element's attributes and styles using the DOM, you can use the setAttribute() method to set or update attributes and getAttribute() to retrieve them. <br> For example, you can change the src of an image by calling element.setAttribute("src", "image.jpg"). To modify an element's styles, access the style property directly, such as element.style.color = "blue", which changes the text color. Additionally, you can manipulate CSS classes using classList, allowing you to add, remove, or toggle classes with methods like element.classList.add().
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="collapse collapse-plus bg-bgColor">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-lg font-bold">How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                  <p class="text-textColor font-medium">
-                    To select an element from the DOM in JavaScript, you can use various methods, such as_
-                  </p>
-                  <ul class="list-disc ml-10">
-                    <li>Selects an element by id. <span class="font-bold">Example: document.getElementById()</span></li>
-                    <li>Selects all elements by a class name. <span class="font-bold">Example: document.getElementsByClassName()</span> </li>
-                    <li>Selects all elements by a tag name. <span class="font-bold">Example: document.getElementsByTagName()</span> </li>
-                    <li>Selects the first element by a CSS selector. <span class="font-bold">Example: document.querySelector()</span> </li>
-                    <li>Selects all elements by a CSS selector. <span class="font-bold">Example: document.querySelectorAll()</span> </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-bgColor">
-                <input type="radio" name="my-accordion-3"/>
-                <div class="collapse-title text-lg font-bold">What is event delegation in the context of the DOM, and why is it useful?</div>
-                <div class="collapse-content">
-                  <p class="text-textColor font-medium">
-                    Event delegation is a technique in the DOM where you add a single event listener to a parent element to manage events for its child elements. Instead of attaching individual listeners to each child, the event bubbles up to the parent, which handles it. This is useful because, It improves performance by reducing the number of event listeners. and also, It allows dynamic elements to be handled without needing new event listeners.
-                  </p>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-bgColor">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-lg font-bold">How do you manipulate an element's attributes and styles using the DOM? </div>
-                <div class="collapse-content">
-                  <p class="text-textColor font-medium">
-                    To manipulate an element's attributes and styles using the DOM, you can use the setAttribute() method to set or update attributes and getAttribute() to retrieve them. <br> For example, you can change the src of an image by calling element.setAttribute("src", "image.jpg"). To modify an element's styles, access the style property directly, such as element.style.color = "blue", which changes the text color. Additionally, you can manipulate CSS classes using classList, allowing you to add, remove, or toggle classes with methods like element.classList.add().
-                  </p>
-                </div>
-              </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
+
     <!-- Footer section start -->
     <footer class="bg-bgColor p-10">
         <div class="text-center">
             <p class="font-bold">Copyright &copy; Donate Bangladesh</p>
         </div>
     </footer>
+
+    <!-- External JS file link -->
     <script src="main.js"></script>
 </body>
 </html>
