@@ -14,6 +14,7 @@ tailwind.config = {
     }
   }
 
+
 // ------Button for navigate New page------//
 function navigateToNewPage() {
   window.location.href = 'blog.html';
@@ -21,6 +22,7 @@ function navigateToNewPage() {
 function goHome() {
   window.location.href = 'index.html';
 }
+
 
 // ------Switching Menu Button-----//
 function setActive(link) {
@@ -30,12 +32,10 @@ function setActive(link) {
       btn.classList.add('btn');
   });
   link.classList.add('btn-success');
-
   const sections = document.querySelectorAll('.content-section');
   sections.forEach(section => {
       section.classList.add('hidden');
   });
-
   const activeSection = document.getElementById(link.dataset.target);
   activeSection.classList.remove('hidden');
 }
@@ -45,26 +45,20 @@ window.onload = function() {
 };
 
 
-
-
 //----------------donations Calculation------------------------//
-
 //-----initial wallet balance------//
 let walletBalance = 10000;
-
 //-----Total donations for each cart--------//
 let totalDonated = {
     1: 3600,
-    2: 13730,
+    2: 1700,
     3: 7530
 };
-
 //-----wallet balance Update-----//
 function updateWalletAndDonation(cartId) {
     document.getElementById('wallet').innerText = Math.round(walletBalance);
     document.getElementById(`donatedAmount${cartId}`).innerText = Math.round(totalDonated[cartId]);
 }
-
 // ------Common donation function for each cart-----//
 function customDonate(cartId) {
     const customAmount = parseFloat(document.getElementById(`customAmount${cartId}`).value);
@@ -77,10 +71,35 @@ function customDonate(cartId) {
         updateWalletAndDonation(cartId);
         //----void input field after successful donation----//
         document.getElementById(`customAmount${cartId}`).value = '';
-
-        // Show alert with confirmation message
-        alert(`Congratulations! You have donated successfully: ${Math.round(customAmount)} BDT`);
+        //-----log donation to history------//
+        logDonation(cartId, Math.round(customAmount));
     } else {
-        alert('Insufficient balance! Please add balance');
+        alert('Insufficient balance! Please add balance.');
     }
+}
+
+
+//-----Function for log donation to history------//
+function logDonation(cartId, amount, dateTime = new Date().toString()) {
+  const historyList = document.getElementById('historyList');
+  const cartTitle = getCartTitle(cartId);
+  //-----Create a history div-------//
+  const historyItem = document.createElement('div');
+  historyItem.classList.add('history-item', 'mb-6', 'bg-bgColor', 'p-8', 'rounded-xl');
+  historyItem.innerHTML = `
+      <strong class="text-xl">${amount} Taka is donated for ${cartTitle}</strong> </br> <strong>Date: </strong>${dateTime}`;
+  historyList.appendChild(historyItem);
+}
+//-------Get the title for each cart-------//
+function getCartTitle(cartId) {
+  switch(cartId) {
+      case 1:
+          return "Donate for flood at Noakhali, Bangladesh";
+      case 2:
+          return "Donate for flood at Feni, Bangladesh";
+      case 3:
+          return "Aid for injured in the Quota Movement";
+      default:
+          return "Unknown Cart";
+  }
 }
