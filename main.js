@@ -15,6 +15,8 @@ tailwind.config = {
   }
 
 
+
+
 // ------Button for navigate New page------//
 function navigateToNewPage() {
   window.location.href = 'blog.html';
@@ -22,6 +24,9 @@ function navigateToNewPage() {
 function goHome() {
   window.location.href = 'index.html';
 }
+
+
+
 
 
 // ------Switching Menu Button-----//
@@ -45,9 +50,12 @@ window.onload = function() {
 };
 
 
+
+
+
 //----------------donations Calculation------------------------//
 //-----initial wallet balance------//
-let walletBalance = 10000;
+let walletBalance = 8000;
 //-----Total donations for each cart--------//
 let totalDonated = {
     1: 3600,
@@ -73,10 +81,30 @@ function customDonate(cartId) {
         document.getElementById(`customAmount${cartId}`).value = '';
         //-----log donation to history------//
         logDonation(cartId, Math.round(customAmount));
+        // Show modal with confirmation message
+        showModal(`You have donated ${Math.round(customAmount)} Taka for humankind.`);
     } else {
         alert('Insufficient balance! Please add balance.');
     }
 }
+
+
+
+
+//-------Show the modal with window-------//
+function showModal(message) {
+  const modal = document.getElementById('confirmationModal');
+  const modalMessage = document.getElementById('modalMessage');
+  modalMessage.innerText = message;
+  modal.style.display = 'flex';
+}
+//------Close the modal window-------//
+function closeModal() {
+  const modal = document.getElementById('confirmationModal');
+  modal.style.display = 'none';
+}
+
+
 
 
 //-----Function for log donation to history------//
@@ -103,3 +131,4 @@ function getCartTitle(cartId) {
           return "Unknown Cart";
   }
 }
+
