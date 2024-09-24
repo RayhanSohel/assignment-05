@@ -14,6 +14,14 @@ tailwind.config = {
     }
   }
 
+// ------Button for navigate New page------//
+function navigateToNewPage() {
+  window.location.href = 'blog.html';
+}
+function goHome() {
+  window.location.href = 'index.html';
+}
+
 // ------Switching Menu Button-----//
 function setActive(link) {
   const buttons = document.querySelectorAll('.menu-btn');
