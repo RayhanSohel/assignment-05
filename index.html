@@ -19,7 +19,7 @@
     <!-- Header section start -->
     <header class="bg-bgColor backdrop-blur-lg sticky top-0 z-50">
         <!--Top Navbar start -->
-        <nav class="p-4 container m-auto">
+        <nav class="p-6 container m-auto">
             <div class="grid md:grid-flow-col justify-center md:justify-between gap-2">
                 <!-- Nav menu Items  -->
                 <div class="flex justify-center">
@@ -49,7 +49,7 @@
             </div>
         </nav>
         <!--Bottom Navbar start -->
-        <nav class="bg-bgColor p-4">
+        <nav class="bg-bgColor p-6">
             <ul class="flex justify-center gap-6">
                 <li>
                     <button class="menu-btn btn btn-success" data-target="donation-section" onclick="setActive(this)">Donation</button>
@@ -62,12 +62,136 @@
     </header>
 
     <!-- main sections start -->
-    <main class="flex-grow">
+    <main class="flex-grow flex justify-center items-center px-6 py-6 md:py-16">
 
-        <div id="donation-section" class="content-section">
-            <h1 class="text-3xl">Donation Section</h1>
+        <!-- Donation Window-->
+        <div id="donation-section" class="content-section flex flex-col gap-16">
+            <!-- Section one start-->
+            <section>
+                <div class="bg-bgColor p-6 rounded-3xl container m-auto">
+                  <div class="flex flex-col md:flex-row gap-6">
+                    <!--section left image-->
+                    <div class="basis-1/2">
+                      <img class="rounded-2xl object-cover w-full min-h-96 max-h-96" src="assets/noakhali.png" alt="">
+                    </div>
+                    <!--Section right Content-->
+                    <div class="basis-1/2">
+                        <div class="flex">
+                            <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
+                                <div class="w-6 cursor-pointer">
+                                    <img src="assets/taka-icon.png" alt="Donate BD Logo" />
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">5100</h3>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">BDT</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div>
+                            <h2 class="text-xl font-bold mt-6">Donate for flood at Noakhali, Bangladesh</h2>
+                            <p class="text-textColor font-medium mt-4">
+                                Help the flood-affected people in Noakhali, Bangladesh by making a donation today. Your contribution will provide essential relief such as food, clean water, shelter, and medical aid to those in need. Together, we can support the families impacted by this disaster and aid in their recovery. Every donation, no matter how small, makes a difference.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <input class="py-4 px-6 w-full text-sm text-black rounded-xl"  type="text" placeholder="Write Donation Amount" >
+                        </div>
+                        <div class="cursor-pointer mt-6" type="submit">
+                            <button class="btn btn-success px-6" >Donate Now</button>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <!-- Section two start-->
+            <section>
+                <div class="bg-bgColor p-6 rounded-3xl container m-auto">
+                  <div class="flex flex-col md:flex-row gap-6">
+                    <!--section left image-->
+                    <div class="basis-1/2">
+                      <img class="rounded-2xl object-cover w-full min-h-96 max-h-96" src="assets/feni.png" alt="">
+                    </div>
+                    <!--Section right Content-->
+                    <div class="basis-1/2">
+                        <div class="flex">
+                            <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
+                                <div class="w-6 cursor-pointer">
+                                    <img src="assets/taka-icon.png" alt="Donate BD Logo" />
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">3400</h3>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">BDT</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div>
+                            <h2 class="text-xl font-bold mt-6">Donate for flood at Feni, Bangladesh</h2>
+                            <p class="text-textColor font-medium mt-4">
+                                Support the flood-affected communities in Feni, Bangladesh by donating today. Your generosity will provide life-saving resources like food, clean water, shelter, and medical care to those struggling in the aftermath of the disaster. Let's come together to help rebuild lives and offer hope to the people of Feni during this difficult time.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <input class="py-4 px-6 w-full text-sm text-black rounded-xl"  type="text" placeholder="Write Donation Amount" >
+                        </div>
+                        <div class="cursor-pointer mt-6" type="submit">
+                            <button class="btn btn-success px-6" >Donate Now</button>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <!-- Section three start-->
+            <section>
+                <div class="bg-bgColor p-6 rounded-3xl container m-auto">
+                  <div class="flex flex-col md:flex-row gap-6">
+                    <!--section left image-->
+                    <div class="basis-1/2">
+                      <img class="rounded-2xl object-cover w-full min-h-96 max-h-96" src="assets/quota-protest.png" alt="">
+                    </div>
+                    <!--Section right Content-->
+                    <div class="basis-1/2">
+                        <div class="flex">
+                            <div class="flex gap-2 rounded-lg bg-bgColor px-4 py-3">
+                                <div class="w-6 cursor-pointer">
+                                    <img src="assets/taka-icon.png" alt="Donate BD Logo" />
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">6200</h3>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold">BDT</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div>
+                            <h2 class="text-xl font-bold mt-6">Aid for injured in the Quota Movement</h2>
+                            <p class="text-textColor font-medium mt-4">
+                                Show your support for those injured in the Quota Movement by contributing to their recovery. Your donation will help provide medical treatment, rehabilitation, and financial assistance to those who were affected. Stand with the injured and ensure they receive the care and support they deserve during this critical time.
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <input class="py-4 px-6 w-full text-sm text-black rounded-xl"  type="text" placeholder="Write Donation Amount" >
+                        </div>
+                        <div class="cursor-pointer mt-6" type="submit">
+                            <button class="btn btn-success px-6" >Donate Now</button>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+            </section>
         </div>
 
+        <!-- History Window-->
         <div id="history-section" class="content-section">
             <h1 class="text-3xl">History Section</h1>
         </div>
