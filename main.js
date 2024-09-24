@@ -43,3 +43,44 @@ window.onload = function() {
   const defaultButton = document.querySelector('.menu-btn[data-target="donation-section"]');
   setActive(defaultButton);
 };
+
+
+
+
+//----------------donations Calculation------------------------//
+
+//-----initial wallet balance------//
+let walletBalance = 10000;
+
+//-----Total donations for each cart--------//
+let totalDonated = {
+    1: 3600,
+    2: 13730,
+    3: 7530
+};
+
+//-----wallet balance Update-----//
+function updateWalletAndDonation(cartId) {
+    document.getElementById('wallet').innerText = Math.round(walletBalance);
+    document.getElementById(`donatedAmount${cartId}`).innerText = Math.round(totalDonated[cartId]);
+}
+
+// ------Common donation function for each cart-----//
+function customDonate(cartId) {
+    const customAmount = parseFloat(document.getElementById(`customAmount${cartId}`).value);
+
+    if (isNaN(customAmount) || customAmount <= 0 || !Number.isInteger(customAmount)) {
+        alert('Please enter a valid & rounded amount!');
+    } else if (walletBalance >= customAmount) {
+        walletBalance -= Math.round(customAmount);
+        totalDonated[cartId] += Math.round(customAmount);
+        updateWalletAndDonation(cartId);
+        //----void input field after successful donation----//
+        document.getElementById(`customAmount${cartId}`).value = '';
+
+        // Show alert with confirmation message
+        alert(`Congratulations! You have donated successfully: ${Math.round(customAmount)} BDT`);
+    } else {
+        alert('Insufficient balance! Please add balance');
+    }
+}
